@@ -284,7 +284,7 @@ export default {
 </router-link>
 ```
 
-## 路由器router方法
+## 编程式路由
 
 1. 编程式路由，不适用`router-link`标签，使用路由器方法控制：
 
