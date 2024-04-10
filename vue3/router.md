@@ -34,6 +34,17 @@ export default createRouter({
 });
 ```
 
+main.ts配置：
+
+```ts
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from '@/router/index';
+const app = createApp(App);
+app.use(router);
+app.mount('#app');
+```
+
 路由使用：
 
 ```js
@@ -55,7 +66,6 @@ export default createRouter({
 <script setup lang="ts">
 import { RouterView, RouterLink } from "vue-router";
 </script>
-
 ```
 
 命名路由：
@@ -179,7 +189,6 @@ import { RouterView, RouterLink } from "vue-router";
     </div>
   </div>
 </template>
-
 ```
 
 接参：
@@ -202,7 +211,6 @@ import { RouterView, RouterLink } from "vue-router";
    import { useRoute } from 'vue-router';
    const route = useRoute();
 </script>
-
 ```
 
 ## props传参
