@@ -149,7 +149,7 @@ export const userCountStore = defineStore('count', {
     // 配置响应动作
     actions: {
       add(value: number) {
-          // this是当前的store对象
+          // this是2层proxy对象，包装的是store对象
           this.sum += value;
       }
     },
@@ -161,7 +161,7 @@ export const userCountStore = defineStore('count', {
     },
     getters: {
         bigNum(state) {
-            // this也是state，所以也可以写return this.sum * 10;
+            // this与state相等，是一个proxy对象，包装了store对象
             console.log(state === this); // true
             return state.sum * 10;
         }
@@ -226,7 +226,6 @@ function sub() {
   sum.value -= step.value;
 }
 </script>
-
 ```
 
 ## 组合式配置方式
@@ -247,7 +246,7 @@ export const useCountStore = defineStore('count', () => {
     function add(value: number) {
         sum.value += value;
     }
-    
+
     // getters
     const bigNum = computed(() => {
         return sum.value * 10;

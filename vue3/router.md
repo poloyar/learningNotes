@@ -279,6 +279,8 @@ export default createRouter({
 
 ## 编程式路由导航
 
+注意是`useRouter`不是`useRoute`
+
 ```js
 <template>
   <div class="news">
