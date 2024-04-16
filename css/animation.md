@@ -60,7 +60,7 @@ css预置了5个贝塞尔曲线值，及一个自定义贝塞尔曲线函数。
 | ease-out    | cubic-bezier(0, 0, 0.58, 1)      | 开头加快，逐渐减慢，是ease-in的逆过程 |
 | ease-in-out | cubic-bezier(042, 0, 0.58, 1)    | 与eas类似，但开头加速更快         |
 
-cubic-bezier的参数是2个手柄端点位置的x和y坐标，即cubic-bezier(x1, y1, x2, y2)。x坐标位于0到1之间，y坐标没有要求，甚至可以为负数。
+cubic-bezier的参数是2个手柄端点位置的x和y坐标，即cubic-bezier(x1, y1, x2, y2)。x坐标位于0到1之间，y坐标没有要求，甚至可以为负数。记住一点：曲线越陡，运动越快；曲线越平，运动越慢。
 
 #### 步进时序函数
 
