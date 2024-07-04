@@ -170,22 +170,6 @@ export default new VueRouter({
 
 ## 路由传参-params
 
-路由配置：
-
-```javascript
-{
-    path: 'games',
-    component: Games,
-    children: [
-        {
-            name: 'toDetail',
-            path: 'detail/:id/:message',
-            component: Detail
-        }
-    ]
-}
-```
-
 传参：
 
 路由配置：
@@ -212,7 +196,7 @@ export default new VueRouter({
 
 2. to对象形式传参：
 
-`params`传参，目的目的路由不要用`path`, 用`name`代替。因为原`path`用了`:id`等标识，要想访问该路由，需要写上完整的路径，很麻烦。
+`params`传参，目的路由不要用`path`, 用`name`代替。因为原`path`用了`:id`等标识，要想访问该路由，需要写上完整的路径，很麻烦。
 
 ```html
 <router-link :to="{
@@ -376,7 +360,7 @@ methods: {
 
 activated: 激活组件（路由切换到该组件）时触发。进入该组件后再进入该组件，不会触发。
 
-deactivated: 去激活组件（路由切到其它组件）时触发。进入该组件后再进入该组件，不会触发。
+deactivated: 去激活组件（路由切到其它组件）时触发。离开该组件后再离开该组件，不会触发。
 
 ```javascript
     activated() {
